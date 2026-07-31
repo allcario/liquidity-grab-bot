@@ -115,7 +115,7 @@ def main():
     exchange_class = getattr(ccxt, cfg.EXCHANGE)
     exchange = exchange_class({"enableRateLimit": True})
 
-  send_telegram_message("✅ Testbericht: de liquidity-grab-scanner draait en Telegram werkt!")
+    send_telegram_message("✅ Testbericht: de liquidity-grab-scanner draait en Telegram werkt!")
 
     if cfg.USE_TOP_N_BY_VOLUME:
         coins = get_top_n_symbols(exchange, cfg.QUOTE_CURRENCY, cfg.TOP_N)
